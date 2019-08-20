@@ -10,8 +10,7 @@ int stepCount = 0;
 
 void setup() {
 
-  Serial.begin(9600);
-  myStepper.setSpeed(9);
+  myStepper.setSpeed(5);
   
 }
 
@@ -19,8 +18,10 @@ void loop() {
 
   int lightLevel = analogRead(A0);
 
-  if (lightLevel < 150) {
-    myStepper.step(200);
+  if (lightLevel < 200 ) {
+    myStepper.step(400);
+    myStepper.step(-400);
+
   }
 
 }
