@@ -11,6 +11,8 @@ int stepCount = 0;
 void setup() {
 
   myStepper.setSpeed(5);
+  myStepper.step(400);
+
   
 }
 
